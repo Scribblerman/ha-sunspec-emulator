@@ -1,0 +1,12 @@
+{
+  "domain": "sunspec_emulator",
+  "name": "SunSpec Emulator",
+  "codeowners": ["@Scribblerman"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/Scribblerman/ha-sunspec-emulator",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/Scribblerman/ha-sunspec-emulator/issues",
+  "requirements": ["pymodbus>=3.6.0"],
+  "version": "1.0.0"
+}

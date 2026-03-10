@@ -1,0 +1,10 @@
+[project]
+name = "ha-sunspec-emulator"
+version = "1.0.0"
+description = "Home Assistant integration to emulate a SunSpec PV inverter via Modbus TCP"
+license = "MIT"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

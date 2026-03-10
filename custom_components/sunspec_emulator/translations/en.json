@@ -1,0 +1,41 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SunSpec Emulator Setup",
+        "description": "Emulate a SunSpec-compatible PV inverter + meter via Modbus TCP.",
+        "data": {
+          "name": "Name",
+          "grid_entity": "Grid Power Entity",
+          "pv_entity": "PV Power Entity",
+          "modbus_port": "Modbus TCP Port",
+          "modbus_unit_id": "Modbus Unit ID",
+          "update_interval": "Update Interval (seconds)",
+          "manufacturer": "SunSpec Manufacturer Name",
+          "model_name": "SunSpec Model Name"
+        },
+        "data_description": {
+          "grid_entity": "Sensor measuring grid power in Watts (positive = import, negative = export). E.g. Shelly 3EM total power.",
+          "pv_entity": "Sensor measuring PV production in Watts (positive = generation). E.g. Hoymiles power output.",
+          "modbus_port": "Port 502 is standard but requires root/admin.",
+          "modbus_unit_id": "Modbus slave address. Most devices expect 1."
+        }
+      }
+    },
+    "error": {
+      "port_in_use": "This port is already used by another SunSpec Emulator instance."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "SunSpec Emulator Options",
+        "data": {
+          "grid_entity": "Grid Power Entity",
+          "pv_entity": "PV Power Entity",
+          "update_interval": "Update Interval (seconds)"
+        }
+      }
+    }
+  }
+}

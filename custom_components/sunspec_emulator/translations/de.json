@@ -1,0 +1,41 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SunSpec Emulator Einrichtung",
+        "description": "Emuliert einen SunSpec-kompatiblen PV-Wechselrichter + Zähler über Modbus TCP.",
+        "data": {
+          "name": "Name",
+          "grid_entity": "Netzleistung-Entität",
+          "pv_entity": "PV-Leistung-Entität",
+          "modbus_port": "Modbus TCP Port",
+          "modbus_unit_id": "Modbus Unit ID",
+          "update_interval": "Aktualisierungsintervall (Sekunden)",
+          "manufacturer": "SunSpec Herstellername",
+          "model_name": "SunSpec Modellname"
+        },
+        "data_description": {
+          "grid_entity": "Sensor für Netzleistung in Watt (positiv = Bezug, negativ = Einspeisung). Z.B. Shelly 3EM Gesamtleistung.",
+          "pv_entity": "Sensor für PV-Erzeugung in Watt (positiv = Erzeugung). Z.B. Hoymiles Ausgangsleistung.",
+          "modbus_port": "Port 502 ist Standard, benötigt aber Root-Rechte.",
+          "modbus_unit_id": "Modbus Slave-Adresse. Die meisten Geräte erwarten 1."
+        }
+      }
+    },
+    "error": {
+      "port_in_use": "Dieser Port wird bereits von einer anderen SunSpec Emulator Instanz verwendet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "SunSpec Emulator Optionen",
+        "data": {
+          "grid_entity": "Netzleistung-Entität",
+          "pv_entity": "PV-Leistung-Entität",
+          "update_interval": "Aktualisierungsintervall (Sekunden)"
+        }
+      }
+    }
+  }
+}
