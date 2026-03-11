@@ -65,10 +65,14 @@ class SunSpecEmulatorConfigFlow(ConfigFlow, domain=DOMAIN):
                 {
                     vol.Optional(CONF_NAME, default="SunSpec Emulator"): TextSelector(),
                     vol.Required(CONF_GRID_ENTITY): EntitySelector(
-                        EntitySelectorConfig(domain="sensor")
+                        EntitySelectorConfig(
+                            domain="sensor", device_class="power"
+                        )
                     ),
                     vol.Required(CONF_PV_ENTITY): EntitySelector(
-                        EntitySelectorConfig(domain="sensor")
+                        EntitySelectorConfig(
+                            domain="sensor", device_class="power"
+                        )
                     ),
                     vol.Optional(
                         CONF_MODBUS_PORT, default=DEFAULT_PORT
@@ -132,11 +136,19 @@ class SunSpecEmulatorOptionsFlow(OptionsFlow):
                     vol.Required(
                         CONF_GRID_ENTITY,
                         default=current.get(CONF_GRID_ENTITY),
-                    ): EntitySelector(EntitySelectorConfig(domain="sensor")),
+                    ): EntitySelector(
+                        EntitySelectorConfig(
+                            domain="sensor", device_class="power"
+                        )
+                    ),
                     vol.Required(
                         CONF_PV_ENTITY,
                         default=current.get(CONF_PV_ENTITY),
-                    ): EntitySelector(EntitySelectorConfig(domain="sensor")),
+                    ): EntitySelector(
+                        EntitySelectorConfig(
+                            domain="sensor", device_class="power"
+                        )
+                    ),
                     vol.Optional(
                         CONF_UPDATE_INTERVAL,
                         default=current.get(CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL),
